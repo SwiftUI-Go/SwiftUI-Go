@@ -14,6 +14,7 @@
 		D9A0E37F267B508700C84DFD /* MaterialDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A0E37E267B508700C84DFD /* MaterialDetailView.swift */; };
 		D9A0E383267B535F00C84DFD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A0E382267B535F00C84DFD /* SettingsView.swift */; };
 		D9A0E3A9267B552000C84DFD /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A0E3A8267B552000C84DFD /* Symbols.swift */; };
+		D9EF34A926818C670059C135 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9EF34A826818C670059C135 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		D9A0E37E267B508700C84DFD /* MaterialDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialDetailView.swift; sourceTree = "<group>"; };
 		D9A0E382267B535F00C84DFD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D9A0E3A8267B552000C84DFD /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
+		D9EF34A826818C670059C135 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				D9A0E35E267B3E8000C84DFD /* SwiftUIGo.entitlements */,
 				D9A0E34D267B3DF500C84DFD /* SwiftUIGoApp.swift */,
 				D9A0E351267B3DF500C84DFD /* Assets.xcassets */,
+				D9EF34A826818C670059C135 /* LaunchScreen.storyboard */,
 				D9A0E356267B3DF500C84DFD /* Info.plist */,
 				D9A0E353267B3DF500C84DFD /* Preview Content */,
 			);
@@ -169,6 +172,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9EF34A926818C670059C135 /* LaunchScreen.storyboard in Resources */,
 				D9A0E355267B3DF500C84DFD /* Preview Assets.xcassets in Resources */,
 				D9A0E352267B3DF500C84DFD /* Assets.xcassets in Resources */,
 			);
@@ -313,6 +317,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_ENTITLEMENTS = SwiftUIGo/SwiftUIGo.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
@@ -338,6 +343,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_ENTITLEMENTS = SwiftUIGo/SwiftUIGo.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
