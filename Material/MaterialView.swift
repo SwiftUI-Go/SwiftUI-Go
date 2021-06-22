@@ -19,13 +19,19 @@ struct MaterialView: View {
             List {
                 NavigationLink(
                     destination: MaterialDetailView()) {
-                    Text("First Section")
+                    MaterialCell("First Section")
+                }
+                NavigationLink(
+                    destination: MaterialDetailView()) {
+                    MaterialCell("Second Section")
                 }
             }
             .navigationBarTitle(Text("SwiftUI Go"))
             .navigationBarItems(trailing: settingLink)
+            .listStyle(InsetGroupedListStyle())
         }
     }
+
 }
 
 struct MaterialView_Previews: PreviewProvider {

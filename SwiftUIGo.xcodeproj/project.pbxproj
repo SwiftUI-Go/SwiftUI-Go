@@ -15,6 +15,7 @@
 		D9A0E383267B535F00C84DFD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A0E382267B535F00C84DFD /* SettingsView.swift */; };
 		D9A0E3A9267B552000C84DFD /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A0E3A8267B552000C84DFD /* Symbols.swift */; };
 		D9EF34A926818C670059C135 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9EF34A826818C670059C135 /* LaunchScreen.storyboard */; };
+		D9EF34B1268194080059C135 /* MaterialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EF34B0268194080059C135 /* MaterialCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		D9A0E382267B535F00C84DFD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D9A0E3A8267B552000C84DFD /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
 		D9EF34A826818C670059C135 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D9EF34B0268194080059C135 /* MaterialCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		D9A0E37C267B500600C84DFD /* SupportViews */ = {
 			isa = PBXGroup;
 			children = (
+				D9EF34B0268194080059C135 /* MaterialCell.swift */,
 			);
 			path = SupportViews;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			files = (
 				D9A0E3A9267B552000C84DFD /* Symbols.swift in Sources */,
 				D9A0E377267B4DDA00C84DFD /* MaterialView.swift in Sources */,
+				D9EF34B1268194080059C135 /* MaterialCell.swift in Sources */,
 				D9A0E383267B535F00C84DFD /* SettingsView.swift in Sources */,
 				D9A0E34E267B3DF500C84DFD /* SwiftUIGoApp.swift in Sources */,
 				D9A0E37F267B508700C84DFD /* MaterialDetailView.swift in Sources */,
