@@ -8,30 +8,29 @@
 import SwiftUI
 
 struct MaterialView: View {
-        
-    let settingLink = NavigationLink(
-        destination: SettingsView()) {
-        Image(systemName: kGearshapeFill)
-    }
-    
+
     var body: some View {
         NavigationView {
             List {
-                NavigationLink(
-                    destination: MaterialDetailView()) {
-                    MaterialCell("First Section")
-                }
-                NavigationLink(
-                    destination: MaterialDetailView()) {
-                    MaterialCell("Second Section")
+                ForEach(MockData.materialSections) { section in
+                    Section(header: Text(section.title)) {
+                        ForEach(section.materials ?? []) { material in
+                            NavigationLink(
+                                destination: MaterialDetailView(material: material)) {
+                                MaterialCell(title: material.name)
+                            }
+                        }
+                    }
                 }
             }
             .navigationBarTitle(Text("SwiftUI Go"))
-            .navigationBarItems(trailing: settingLink)
+            .navigationBarItems(trailing: NavigationLink(
+                destination: SettingsView()) {
+                Image.gearshape.foregroundColor(.themeColor)
+            })
             .listStyle(InsetGroupedListStyle())
         }
     }
-
 }
 
 struct MaterialView_Previews: PreviewProvider {

@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct MaterialDetailView: View {
+    var material: Material?
+    
     var body: some View {
         List {
-            Text("Detail View")
-        }.navigationBarTitle(Text("Detail"))
+            Text(material?.name ?? "")
+        }.navigationBarTitle(Text(material?.name ?? ""))
     }
 }
 

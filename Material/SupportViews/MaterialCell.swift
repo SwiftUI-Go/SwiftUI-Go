@@ -9,10 +9,6 @@ import SwiftUI
 
 struct MaterialCell: View {
     var title = ""
-    init(_ title: String) {
-        self.title = title
-    }
-    
     var body: some View {
         Text(self.title)
     }
@@ -20,6 +16,6 @@ struct MaterialCell: View {
 
 struct MaterialCell_Previews: PreviewProvider {
     static var previews: some View {
-        MaterialCell("标题")
+        MaterialCell(title: "标题")
     }
 }

@@ -5,6 +5,8 @@
 //  Created by lvyuan on 2021/6/17.
 //
 
-import UIKit
+import SwiftUI
 
-let kGearshapeFill = "gearshape.fill"
+extension Image {
+    public static let gearshape = Image(systemName: "gearshape")
+}
