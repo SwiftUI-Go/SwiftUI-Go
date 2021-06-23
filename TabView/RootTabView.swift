@@ -46,22 +46,19 @@ struct RootTabView: View {
                 MaterialView()
                     .tag(TabTag.Material)
                     .tabItem {
-                        Image(systemName: TabTag.Material.icon)
-                        Text(TabTag.Material.title)
+                        Label(TabTag.Material.title, systemImage: TabTag.Material.icon)
                     }
                 
                 DemoView()
                     .tag(TabTag.Demo)
                     .tabItem {
-                        Image(systemName: TabTag.Demo.icon)
-                        Text(TabTag.Demo.title)
+                        Label(TabTag.Demo.title, systemImage: TabTag.Demo.icon)
                     }
 
                 SettingsView()
                     .tag(TabTag.Settings)
                     .tabItem {
-                        Image(systemName: TabTag.Settings.icon)
-                        Text(TabTag.Settings.title)
+                        Label(TabTag.Settings.title, systemImage: TabTag.Settings.icon)
                     }
 
             }

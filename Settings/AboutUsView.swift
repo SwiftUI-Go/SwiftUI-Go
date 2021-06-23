@@ -11,15 +11,6 @@ struct AboutUsView: View {
     
     @State var version = ""
     
-    private func rowCell(_ l: LocalizedStringKey, _ r: String) -> some View {
-        return HStack {
-            Text(l)
-            Spacer()
-            Text(r)
-                .foregroundColor(.gray)
-        }
-    }
-    
     private func loadInfo() {
         guard let info = Bundle.main.infoDictionary else {
             return
@@ -29,7 +20,12 @@ struct AboutUsView: View {
     
     var body: some View {
         List {
-            rowCell(LocalizeKey.version, version)
+            HStack {
+                Text(LocalizeKey.version)
+                Spacer()
+                Text(version)
+                    .foregroundColor(.gray)
+            }
         }
         .navigationBarTitle(Text(LocalizeKey.aboutUs))
         .listStyle(InsetGroupedListStyle())

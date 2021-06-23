@@ -15,11 +15,18 @@ struct MaterialDetailView: View {
     }
     
     var body: some View {
-        List {
-            
+        TabView {
+            List {
+                Text("1")
+                Text("2")
+            }
+            List {
+                Text("1")
+                Text("2")
+            }
         }
-        .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)
-        .navigationBarTitle(Text(material?.name ?? ""))
+        .navigationBarTitleDisplayMode(.inline)
+        .tabViewStyle(PageTabViewStyle())
     }
 }
 
