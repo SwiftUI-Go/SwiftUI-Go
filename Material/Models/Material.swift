@@ -5,16 +5,10 @@
 //  Created by lvyuan on 2021/6/22.
 //
 
-import Foundation
+import SwiftUI
 
-struct Material: Identifiable {
-    let id = UUID()
+struct ExpandMaterial: Identifiable, Codable, Hashable {
+    var id: Int
     var name = ""
-    var icon = ""
-}
-
-struct SectionMaterial: Identifiable {
-    let id = UUID()
-    var title = ""
-    var materials: [Material]?
+    var materials: [ExpandMaterial]?
 }

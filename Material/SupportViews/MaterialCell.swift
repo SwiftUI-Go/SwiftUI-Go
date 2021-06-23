@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct MaterialCell: View {
-    var title = ""
+    var material: ExpandMaterial?
+    init(_ material: ExpandMaterial?) {
+        self.material = material
+    }
     var body: some View {
-        Text(self.title)
+        Text(self.material?.name ?? "")
     }
 }
 
 struct MaterialCell_Previews: PreviewProvider {
     static var previews: some View {
-        MaterialCell(title: "标题")
+        MaterialCell(ExpandMaterial(id: -1, name: "题目"))
     }
 }

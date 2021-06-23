@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  SwiftUIGo
+
+  Created by lvyuan on 2021/6/22.
+  
+*/
+"appName" = "SwiftUI Go";
+"settings" = "设置";
+"aboutUs" = "关于我们";
+"demo" = "小样";
+"symbols" = "符号";
+"version" = "版本";

@@ -8,17 +8,23 @@
 import SwiftUI
 
 struct MaterialDetailView: View {
-    var material: Material?
+    var material: ExpandMaterial?
+    
+    init(_ material: ExpandMaterial?) {
+        self.material = material
+    }
     
     var body: some View {
         List {
-            Text(material?.name ?? "")
-        }.navigationBarTitle(Text(material?.name ?? ""))
+            
+        }
+        .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)
+        .navigationBarTitle(Text(material?.name ?? ""))
     }
 }
 
 struct MaterialDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        MaterialDetailView()
+        MaterialDetailView(ExpandMaterial(id: -1, name: "题目"))
     }
 }

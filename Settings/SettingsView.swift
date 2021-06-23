@@ -10,8 +10,11 @@ import SwiftUI
 struct SettingsView: View {
     var body: some View {
         List {
-            Text("About Us")
-        }.navigationBarTitle(Text("Settings"))
+            NavigationLink(destination: AboutUsView()) {
+                Text(LocalizeKey.aboutUs)
+            }
+        }
+        .listStyle(InsetGroupedListStyle())
     }
 }
 

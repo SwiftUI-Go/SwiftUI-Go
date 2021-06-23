@@ -8,28 +8,34 @@
 import SwiftUI
 
 struct MaterialView: View {
-
+    
+    @StateObject var mockData = MockData()
+    
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(MockData.materialSections) { section in
-                    Section(header: Text(section.title)) {
-                        ForEach(section.materials ?? []) { material in
-                            NavigationLink(
-                                destination: MaterialDetailView(material: material)) {
-                                MaterialCell(title: material.name)
+        Form {
+            ForEach(mockData.sectionMaterials) { section in
+                
+                Section(header: Text(section.name), content: {
+                    
+                    ForEach(section.materials ?? []) { item in
+                        
+                        if let itemMaterials = item.materials, (itemMaterials.count != 0) {
+                            
+                            DisclosureGroupView(expandedMaterial: item)
+                            
+                        } else {
+                            
+                            NavigationLink(destination: MaterialDetailView(item)) {
+                                MaterialCell(item)
                             }
+                            
                         }
                     }
-                }
+                })
+                
             }
-            .navigationBarTitle(Text("SwiftUI Go"))
-            .navigationBarItems(trailing: NavigationLink(
-                destination: SettingsView()) {
-                Image.gearshape.foregroundColor(.themeColor)
-            })
-            .listStyle(InsetGroupedListStyle())
         }
+        .listStyle(InsetGroupedListStyle())
     }
 }
 
