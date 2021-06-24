@@ -25,7 +25,7 @@ struct MaterialView: View {
                             
                         } else {
                             
-                            NavigationLink(destination: MaterialDetailView(item)) {
+                            NavigationLink(destination: MaterialDetailView(material: item)) {
                                 MaterialCell(item)
                             }
                             

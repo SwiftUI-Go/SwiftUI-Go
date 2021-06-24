@@ -14,7 +14,7 @@ struct DisclosureGroupView: View {
     var body: some View {
         DisclosureGroup(isExpanded: $isExpanded, content: {
             ForEach(expandedMaterial?.materials ?? []) { item in
-                NavigationLink(destination: MaterialDetailView(item)) {
+                NavigationLink(destination: MaterialDetailView(material: item)) {
                     MaterialCell(item)
                 }
             }
