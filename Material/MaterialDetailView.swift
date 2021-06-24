@@ -12,21 +12,26 @@ struct MaterialDetailView: View {
     @State private var selectedSegment = 0
     
     var body: some View {
-
+        
         TabView(selection: $selectedSegment) {
             MaterialTutorialView(material: material)
-                .tag(0)
-            MaterialWebView(url: URL(string: "https://www.baidu.com"))
-                .equatable()
+                    .tag(0)
+            
+            if let urlStr = material?.url {
+                MaterialWebView(url: URL(string: urlStr))
                 .tag(1)
+            }
+
         }
         .navigationBarTitleDisplayMode(.inline)
         .tabViewStyle(PageTabViewStyle())
         .navigationBarItems(trailing: Picker(selection: $selectedSegment, label: Text(""), content: {
-            Text("教程").tag(0)
-            Text("源码").tag(1)
-        })
-        .pickerStyle(SegmentedPickerStyle()))
+            if ((material?.url) != nil) {
+                Text("教程").tag(0)
+                Text("源码").tag(1)
+            }
+        }).pickerStyle(SegmentedPickerStyle()))
+        
     }
 }
 

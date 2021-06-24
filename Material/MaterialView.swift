@@ -15,7 +15,7 @@ struct MaterialView: View {
         Form {
             ForEach(mockData.sectionMaterials) { section in
                 
-                Section(header: Text(section.name), content: {
+                Section(header: Text(section.name ?? ""), content: {
                     
                     ForEach(section.materials ?? []) { item in
                         

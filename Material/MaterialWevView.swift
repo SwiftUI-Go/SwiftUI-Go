@@ -29,7 +29,3 @@ struct MaterialWebView: UIViewRepresentable {
     }
     
 }
-
-extension MaterialWebView: Equatable {
-    
-}

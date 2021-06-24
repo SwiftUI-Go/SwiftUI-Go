@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ExpandMaterial: Identifiable, Codable, Hashable {
-    var id: Int
-    var name = ""
+    var id: Int?
+    var name: String?
+    var url: String?
     var materials: [ExpandMaterial]?
 }
