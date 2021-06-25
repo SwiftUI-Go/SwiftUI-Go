@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MarkdownUI
 
 struct MaterialDetailView: View {
     public var material: ExpandMaterial?
@@ -14,19 +15,27 @@ struct MaterialDetailView: View {
     var body: some View {
         
         TabView(selection: $selectedSegment) {
+            
             MaterialTutorialView(material: material)
                     .tag(0)
             
-            if let urlStr = material?.url {
-                MaterialWebView(url: URL(string: urlStr))
-                .tag(1)
+            if let sourceType = material?.sourceType(), let sourceUrl = material?.sourceUrl() {
+                
+                switch sourceType {
+                case SourceType.http, SourceType.html:
+                    MaterialWebView(sourceUrl)
+                        .tag(1)
+                default:
+                    MarkdownView(markdown: material?.sourceUrl()?.fileContent())
+                        .tag(1)
+                }
+                
             }
-
         }
         .navigationBarTitleDisplayMode(.inline)
-        .tabViewStyle(PageTabViewStyle())
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
         .navigationBarItems(trailing: Picker(selection: $selectedSegment, label: Text(""), content: {
-            if ((material?.url) != nil) {
+            if let sourceType = material?.sourceType(), sourceType != SourceType.unkown {
                 Text("教程").tag(0)
                 Text("源码").tag(1)
             }
