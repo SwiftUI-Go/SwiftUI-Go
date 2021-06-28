@@ -13,26 +13,26 @@ struct RootTabView: View {
     
     enum TabTag: Int {
         case Material = 0
-        case Demo = 1
+        case Play = 1
         case Settings = 2
         
         var title: LocalizedStringKey {
             switch self {
             case .Material:
-                return LocalizeKey.appName
-            case .Demo:
-                return LocalizeKey.demo
+                return LocalizeKey.appName.localized()
+            case .Play:
+                return LocalizeKey.play.localized()
             case .Settings:
-                return LocalizeKey.settings
+                return LocalizeKey.settings.localized()
             }
         }
         
         var icon: String {
             switch self {
             case .Material:
-                return Symbols.circleFill0
-            case .Demo:
-                return Symbols.circleFill1
+                return Symbols.paperplane
+            case .Play:
+                return Symbols.gamecontroller
             case .Settings:
                 return Symbols.gearshape
             }
@@ -49,10 +49,10 @@ struct RootTabView: View {
                         Label(TabTag.Material.title, systemImage: TabTag.Material.icon)
                     }
                 
-                DemoView()
-                    .tag(TabTag.Demo)
+                PlayView()
+                    .tag(TabTag.Play)
                     .tabItem {
-                        Label(TabTag.Demo.title, systemImage: TabTag.Demo.icon)
+                        Label(TabTag.Play.title, systemImage: TabTag.Play.icon)
                     }
 
                 SettingsView()

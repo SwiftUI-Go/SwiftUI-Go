@@ -33,8 +33,7 @@ struct MaterialWebView: UIViewRepresentable {
     func updateUIView(_ uiView: WKWebView, context: Context) {
         if let myURL = url {
             uiView.load(URLRequest(url: myURL))
-        }
-        if let html = htmlContent {
+        } else if let html = htmlContent {
             uiView.loadHTMLString(html, baseURL: nil)
         }
     }

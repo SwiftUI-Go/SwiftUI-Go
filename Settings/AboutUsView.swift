@@ -21,13 +21,13 @@ struct AboutUsView: View {
     var body: some View {
         List {
             HStack {
-                Text(LocalizeKey.version)
+                Text(LocalizeKey.version.rawValue.localized())
                 Spacer()
                 Text(version)
                     .foregroundColor(.gray)
             }
         }
-        .navigationBarTitle(Text(LocalizeKey.aboutUs))
+        .navigationBarTitle(Text(LocalizeKey.aboutUs.localized()))
         .listStyle(InsetGroupedListStyle())
         .onAppear(perform: loadInfo)
     }

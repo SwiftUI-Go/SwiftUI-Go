@@ -10,8 +10,9 @@
 		940BB811B88BBB1088AA52AB /* Pods_SwiftUIGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2838F3F57AE6727D472A001 /* Pods_SwiftUIGo.framework */; };
 		D957CEE126858559008E6F27 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = D957CEE026858559008E6F27 /* MarkdownUI */; };
 		D957CEE4268586E5008E6F27 /* MarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D957CEE3268586E5008E6F27 /* MarkdownView.swift */; };
+		D957CEEC2685B6CA008E6F27 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D957CEEB2685B6CA008E6F27 /* SearchBarView.swift */; };
 		D9615844268308A3000DDC1F /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9615843268308A3000DDC1F /* RootTabView.swift */; };
-		D961584926830B7A000DDC1F /* DemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D961584826830B7A000DDC1F /* DemoView.swift */; };
+		D961584926830B7A000DDC1F /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D961584826830B7A000DDC1F /* PlayView.swift */; };
 		D961584C26831248000DDC1F /* SymbolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D961584B26831248000DDC1F /* SymbolsView.swift */; };
 		D961585126831624000DDC1F /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D961585026831624000DDC1F /* AboutUsView.swift */; };
 		D961585D26833078000DDC1F /* TabNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D961585C26833078000DDC1F /* TabNavView.swift */; };
@@ -43,8 +44,9 @@
 /* Begin PBXFileReference section */
 		1E4C53A411F100066BC8C5D6 /* Pods-SwiftUIGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIGo.release.xcconfig"; path = "Target Support Files/Pods-SwiftUIGo/Pods-SwiftUIGo.release.xcconfig"; sourceTree = "<group>"; };
 		D957CEE3268586E5008E6F27 /* MarkdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownView.swift; sourceTree = "<group>"; };
+		D957CEEB2685B6CA008E6F27 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		D9615843268308A3000DDC1F /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
-		D961584826830B7A000DDC1F /* DemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoView.swift; sourceTree = "<group>"; };
+		D961584826830B7A000DDC1F /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
 		D961584B26831248000DDC1F /* SymbolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolsView.swift; sourceTree = "<group>"; };
 		D961585026831624000DDC1F /* AboutUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
 		D961585C26833078000DDC1F /* TabNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavView.swift; sourceTree = "<group>"; };
@@ -101,6 +103,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D957CEEA2685B6AA008E6F27 /* SupportViews */ = {
+			isa = PBXGroup;
+			children = (
+				D957CEEB2685B6CA008E6F27 /* SearchBarView.swift */,
+			);
+			path = SupportViews;
+			sourceTree = "<group>";
+		};
 		D961583E26830886000DDC1F /* TabView */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,7 +122,7 @@
 		D961584726830B66000DDC1F /* DemoView */ = {
 			isa = PBXGroup;
 			children = (
-				D961584826830B7A000DDC1F /* DemoView.swift */,
+				D961584826830B7A000DDC1F /* PlayView.swift */,
 				D961584B26831248000DDC1F /* SymbolsView.swift */,
 				D961585C26833078000DDC1F /* TabNavView.swift */,
 			);
@@ -122,6 +132,7 @@
 		D9A0E341267B3DF500C84DFD = {
 			isa = PBXGroup;
 			children = (
+				D957CEEA2685B6AA008E6F27 /* SupportViews */,
 				D961584726830B66000DDC1F /* DemoView */,
 				D961583E26830886000DDC1F /* TabView */,
 				D9EF34B92681BC050059C135 /* Resources */,
@@ -257,6 +268,7 @@
 				D9A0E346267B3DF500C84DFD /* Sources */,
 				D9A0E347267B3DF500C84DFD /* Frameworks */,
 				D9A0E348267B3DF500C84DFD /* Resources */,
+				3DF4615672413B1C5E4B0EB4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -326,6 +338,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3DF4615672413B1C5E4B0EB4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftUIGo/Pods-SwiftUIGo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftUIGo/Pods-SwiftUIGo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftUIGo/Pods-SwiftUIGo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A33FC0A59FDE78A583075F95 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -365,6 +394,7 @@
 				D9A3B14826847D6F00A9BC39 /* MaterialWKWebView.swift in Sources */,
 				D9A0E377267B4DDA00C84DFD /* MaterialView.swift in Sources */,
 				D9EF34B1268194080059C135 /* MaterialCell.swift in Sources */,
+				D957CEEC2685B6CA008E6F27 /* SearchBarView.swift in Sources */,
 				D9EF34C12681D2B00059C135 /* MockData.swift in Sources */,
 				D9EF34B72681B8100059C135 /* Colors.swift in Sources */,
 				D9EF34DF2681EC280059C135 /* DisclosureGroupView.swift in Sources */,
@@ -374,7 +404,7 @@
 				D9A0E34E267B3DF500C84DFD /* SwiftUIGoApp.swift in Sources */,
 				D9EF34C42681D4340059C135 /* Defines.swift in Sources */,
 				D9A0E37F267B508700C84DFD /* MaterialDetailView.swift in Sources */,
-				D961584926830B7A000DDC1F /* DemoView.swift in Sources */,
+				D961584926830B7A000DDC1F /* PlayView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,14 +7,23 @@
 
 import SwiftUI
 
-enum LocalizeKey {
-    static let appName = LocalizedStringKey("appName")
-    static let settings = LocalizedStringKey("settings")
-    static let aboutUs = LocalizedStringKey("aboutUs")
-    static let demo = LocalizedStringKey("demo")
-    static let symbols = LocalizedStringKey("symbols")
-    static let version = LocalizedStringKey("version")
-
+extension String {
+    func localized() -> LocalizedStringKey {
+        return LocalizedStringKey(self)
+    }
 }
 
-
+enum LocalizeKey: String {
+    case appName = "appName"
+    case settings = "settings"
+    case aboutUs = "aboutUs"
+    case demo = "demo"
+    case symbols = "symbols"
+    case version = "version"
+    case play = "play"
+    case filter = "filter"
+    
+    func localized() -> LocalizedStringKey {
+        return self.rawValue.localized()
+    }
+}

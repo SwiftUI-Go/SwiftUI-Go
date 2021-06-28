@@ -13,6 +13,10 @@ extension Symbols {
     public static let gearshape = "gearshape"
     public static let circleFill0 = "0.circle.fill"
     public static let circleFill1 = "1.circle.fill"
+    public static let paperplane = "paperplane"
+    public static let gamecontroller = "gamecontroller"
+
+    
 }
 
 public var SystemSymbols: [String] = """

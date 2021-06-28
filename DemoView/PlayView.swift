@@ -1,5 +1,5 @@
 //
-//  DemoView.swift
+//  PlayView.swift
 //  SwiftUIGo
 //
 //  Created by lvyuan on 2021/6/23.
@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct DemoView: View {
+struct PlayView: View {
     var body: some View {
         List {
             NavigationLink(destination: SymbolsView()) {
-                Text(LocalizeKey.symbols)
+                Text(LocalizeKey.symbols.localized())
             }
             NavigationLink(destination: TabNavView()) {
                 Text("Tab导航结构")
@@ -23,6 +23,6 @@ struct DemoView: View {
 
 struct DemoView_Previews: PreviewProvider {
     static var previews: some View {
-        DemoView()
+        PlayView()
     }
 }

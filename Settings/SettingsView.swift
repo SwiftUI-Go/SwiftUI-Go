@@ -11,7 +11,7 @@ struct SettingsView: View {
     var body: some View {
         List {
             NavigationLink(destination: AboutUsView()) {
-                Text(LocalizeKey.aboutUs)
+                Text(LocalizeKey.aboutUs.localized())
             }
         }
         .listStyle(InsetGroupedListStyle())
