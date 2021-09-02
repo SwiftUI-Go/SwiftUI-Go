@@ -1,20 +1,16 @@
 PODS:
   - Alamofire (5.4.3)
-  - MarkdownView (1.7.1)
 
 DEPENDENCIES:
   - Alamofire (= 5.4.3)
-  - MarkdownView (= 1.7.1)
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - MarkdownView
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
-  MarkdownView: cf30a97ab39b2bce04406adce541972c882363bd
 
-PODFILE CHECKSUM: e78413e43a6a17e64ee9ad1453667e257ace5018
+PODFILE CHECKSUM: 5537634927bac5600c113047228c1b7ca4964af1
 
 COCOAPODS: 1.10.2
