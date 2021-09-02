@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import MarkdownUI
 
 struct MaterialDetailView: View {
     public var material: ExpandMaterial?
@@ -26,10 +25,15 @@ struct MaterialDetailView: View {
                     MaterialWebView(sourceUrl)
                         .tag(1)
                 default:
-                    MarkdownView(markdown: material?.sourceUrl()?.fileContent())
-                        .tag(1)
+                    if let html = material?.sourceUrl()?.fileContent()?.markdownToHTML {
+                        MaterialWebView(html)
+                            .tag(1)
+                    } else {
+                        MaterialWebView("404")
+                            .tag(1)
+                    }
                 }
-                
+
             }
         }
         .navigationBarTitleDisplayMode(.inline)

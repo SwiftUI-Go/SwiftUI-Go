@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import PerfectMarkdown
 
 extension String {
     public func toUrl() -> URL? {

@@ -6,7 +6,9 @@ target 'SwiftUIGo' do
   use_frameworks!
 
   # Pods for SwiftUIGo
-  pod 'Alamofire', '5.4'
+  pod 'Alamofire', '5.4.3'
+  
+  pod 'MarkdownView', '1.7.1'
 
 
 end
